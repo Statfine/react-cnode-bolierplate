@@ -1,0 +1,43 @@
+.title {
+  margin-top: 105px;
+  text-align: center;
+  font-size: 48px;
+  letter-spacing: 8px;
+  color: #07A3FD;
+}
+
+.second_title {
+  margin: 19px auto 24px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 20px;
+  color: #07A3FD;
+}
+
+.img_content {
+  position: relative;
+}
+
+.img {
+  width: 380px;
+  height: 380px;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn {
+  position: absolute;
+  width: 174px;
+  height: 56px;
+  line-height: 56px;
+  left: 50%;
+  margin-left: -81px;
+  outline: none;
+  border-radius: 2px;
+  top: 240px;
+  background-color: #07A3FD;
+  border: 1px solid #07A3FD;
+  color: #FFF;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+{
+  "globalDependencies": {
+    "expect": "registry:dt/expect#1.13.4+20160316155526",
+    "immutable": "registry:dt/immutable#3.8.1+20160608070634",
+    "lodash": "registry:dt/lodash#4.14.0+20161004174455",
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "redux-saga": "registry:dt/redux-saga#0.9.1+20160703120921"
+  }
+}
