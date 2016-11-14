@@ -1,0 +1,37 @@
+.foot {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  z-index: 999;
+  background: #181A1D;
+  border-top: #2A2A30 2px solid;
+}
+
+.foot_ul {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+.foot_ul li {
+  text-align: center;
+  width: 25%;
+  height: 50px;
+  float: left;
+}
+
+.on {
+  color: #108FE9 !important;
+}
+
+.foot_ul li a {
+  font-size: 18px;
+  display: block;
+  color: #5F5F5F;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: blink;
+}

@@ -25,4 +25,5 @@ app.listen(port, (err) => {
   if (err) {
     return logger.error(err.message);
   }
+  console.info('==>Listening on port %s. Open up http://localhost:%s/ in your browser.', port, port);
 });

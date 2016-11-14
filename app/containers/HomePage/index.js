@@ -12,7 +12,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import shallowCompare from 'react-addons-shallow-compare';
-import Header from 'components/Header';
 
 class HomePage extends Component {
 
@@ -23,8 +22,8 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <Helmet title="create" meta={[{ name: 'description', content: 'easub ads application create ad' }]} />
-        <Header title={'title'} />
+        <Helmet title="Home" meta={[{ name: 'home', content: 'home' }]} />
+        Home
       </div>
     );
   }
