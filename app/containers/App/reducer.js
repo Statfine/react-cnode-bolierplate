@@ -27,7 +27,7 @@ const initialState = fromJS({
     uid: '',
     error: '',
   },
-  loggedIn: localStorage.access_token && Date.now() < localStorage.expires_in,
+  loggedIn: false,
 });
 
 function appReducer(state = initialState, action) {

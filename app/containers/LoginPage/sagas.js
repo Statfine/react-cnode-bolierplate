@@ -17,6 +17,11 @@ export function* login(action) {
     const { accessToken } = submitData.toJS();
     const data = yield call(loginApi.login, accessToken);
     yield put(loginSuccess(data));
+    const localStorage = global.window.localStorage;
+    localStorage.access_token = accessToken;
+    localStorage.avatar_url = data.avatar_url;
+    localStorage.id = data.id;
+    localStorage.loginname = data.loginname;
     yield put(push('/user'));
   } catch (error) {
     const msg = error.message ? error.message : error;
