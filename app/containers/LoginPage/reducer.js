@@ -9,7 +9,7 @@ import { fromJS } from 'immutable';
 
 const initialState = fromJS({
   submitData: {
-    accessToken: '1231',
+    accessToken: '1f97482a-0320-460e-96df-cbb1fb124aeb',
   },
   requesting: false,
   error: '',

@@ -21,7 +21,7 @@ const loginApi = {
       }),
     };
     return request(`${API_BASE}/accesstoken`, options)
-      .then((data) => data.data)
+      .then((data) => data)
       .catch((err) => {
         throw getError(err);
       });

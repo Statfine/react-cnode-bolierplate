@@ -7,6 +7,7 @@ import {
   loginSuccess, loginError,
 } from './actions';
 import { takeLatest } from 'redux-saga';
+import { push } from 'react-router-redux';
 import { call, put, fork, select } from 'redux-saga/effects';
 import loginApi from './loginApi';
 
@@ -16,6 +17,7 @@ export function* login(action) {
     const { accessToken } = submitData.toJS();
     const data = yield call(loginApi.login, accessToken);
     yield put(loginSuccess(data));
+    yield put(push('/user'));
   } catch (error) {
     const msg = error.message ? error.message : error;
     yield put(loginError(msg));

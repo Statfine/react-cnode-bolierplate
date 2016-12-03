@@ -32,7 +32,7 @@ class LoginPage extends Component {
 
   render() {
     const { accessToken } = this.props.submitData.toJS();
-    const { onLogin, error } = this.props;
+    const { onLogin, error, requesting } = this.props;
 
     return (
       <div>
@@ -41,8 +41,10 @@ class LoginPage extends Component {
         <div className={classNames(styleDashboard.container_content, styles.content)}>
           <input className={styles.input} value={accessToken} onChange={this.handleChangeTitle} type="text" />
           <button
-            className={classNames(styles.button, styles.ablebutton)}
-            onClick={(e) => onLogin()}
+            className={classNames(styles.button, requesting ? '' : styles.ablebutton)}
+            onClick={(e) => {
+              onLogin();
+            }}
           >
             登陆
           </button>

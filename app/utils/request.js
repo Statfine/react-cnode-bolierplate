@@ -19,19 +19,19 @@ export function injectStore(store) {
   globalStore = store;
 }
 
-function parseData(data) {
-  if (data.code === 0 || (data.status_code >= 200 && data.status_code < 300)) {
-    return data;
-  }
-
-  if (GLOBAL_ERRORS[data.code]) {
-    globalStore.dispatch(globalError(data.code));
-  }
-
-  const error = new Error(data.message);
-  error.data = data;
-  throw error;
-}
+// function parseData(data) {
+//  if (data.code === 0 || (data.status_code >= 200 && data.status_code < 300)) {
+//    return data;
+//  }
+//
+//  if (GLOBAL_ERRORS[data.code]) {
+//    globalStore.dispatch(globalError(data.code));
+//  }
+//
+//  const error = new Error(data.message);
+//  error.data = data;
+//  throw error;
+// }
 
 /**
  * Requests a URL, returning a promise
@@ -50,14 +50,9 @@ export function request(url, options) {
     },
   };
 
-  if (global.window.localStorage.access_token) {
-    defaultOptions.headers.Authorization = `Bearer ${global.window.localStorage.access_token}`;
-  }
-
   const mergeOptions = _.merge({}, defaultOptions, options);
   return fetch(url, mergeOptions)
-    .then(parseJSON)
-    .then(parseData);
+    .then(parseJSON);
 }
 
 export function get(urlString, params) {
