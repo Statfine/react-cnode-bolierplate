@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 import _ from 'lodash';
-import { GLOBAL_ERRORS } from 'containers/App/errors';
-import { globalError } from 'containers/App/actions';
+// import { GLOBAL_ERRORS } from 'containers/App/errors';
+// import { globalError } from 'containers/App/actions';
 
 /**
  * Parses the JSON returned by a network request
@@ -14,10 +14,10 @@ function parseJSON(response) {
   return response.json();
 }
 
-let globalStore;
-export function injectStore(store) {
-  globalStore = store;
-}
+// let globalStore;
+// export function injectStore(store) {
+//  globalStore = store;
+// }
 
 // function parseData(data) {
 //  if (data.code === 0 || (data.status_code >= 200 && data.status_code < 300)) {
