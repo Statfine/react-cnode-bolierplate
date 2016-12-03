@@ -99,6 +99,7 @@
       }
     },
     "rules": {
+      "no-param-reassign": 0,
       "radix": [
         "error",
         "as-needed"

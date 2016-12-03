@@ -36,7 +36,7 @@ class Foot extends Component {
             </Link>
           </li>
           <li>
-            <Link to="/User" className={classNames(arr['/User'])}>
+            <Link to="/User" className={classNames(arr['/user'])}>
               我的
             </Link>
           </li>

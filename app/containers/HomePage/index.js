@@ -11,7 +11,10 @@
 
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import Header from 'components/Header';
 import shallowCompare from 'react-addons-shallow-compare';
+
+import styleDashboard from '../Dashboard/styles.css';
 
 class HomePage extends Component {
 
@@ -23,7 +26,10 @@ class HomePage extends Component {
     return (
       <div>
         <Helmet title="Home" meta={[{ name: 'home', content: 'home' }]} />
-        Home
+        <Header title={'Home'} />
+        <div className={styleDashboard.container_content}>
+          Home
+        </div>
       </div>
     );
   }
